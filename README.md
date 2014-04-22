@@ -1,0 +1,1 @@
+You will need glew, assimp, and glfw correctly configured for this to work. No makefile provided.
