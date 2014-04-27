@@ -6,14 +6,18 @@ uniform mat4 uModelMatrix;
 uniform vec3 uLPos;
 uniform vec3 cameraPos;
 uniform float uOutline;
+uniform sampler2D uTexUnit;
+uniform float sky;
 
 varying vec4 fNormal;
 varying vec3 fColor;
 varying vec4 fPos;
+varying vec2 vTexCoord;
 
 void main() {
    vec4 color;
    float numShades = 3.0;
+   vec4 texColor1 = texture2D(uTexUnit, vTexCoord);
    
    if(uOutline > 0.5) {
       gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
@@ -28,5 +32,10 @@ void main() {
       }
 
       gl_FragColor = vec4(dColor * q_intensity, 1.0);
+	  //gl_FragColor = vec4(0.7, 0.7, 0.7, 1.0);
+	  
+	  if(sky == 1.0){
+		gl_FragColor = texColor1;
+	  }
    }
 }

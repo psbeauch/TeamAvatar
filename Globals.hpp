@@ -5,11 +5,6 @@
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtc/type_ptr.hpp"
-/*
-#include <assimp/Importer.hpp>
-#include <assimp/scene.h>
-#include <assimp/postprocess.h>
-*/
 
 /* handles */
 extern GLint h_aPosition;
@@ -22,6 +17,18 @@ extern GLint h_uLColor;
 extern GLint h_uCol;
 extern GLint h_uCameraPos;
 extern GLint h_uOutline;
+
+/*skybox handles*/
+extern GLuint SkyBuffObj1, SkyIndxBuffObj1, SkyNormalBuffObj1, SkyTexBuffObj1;
+extern GLuint SkyBuffObj2, SkyIndxBuffObj2, SkyNormalBuffObj2, SkyTexBuffObj2;
+extern GLuint SkyBuffObj3, SkyIndxBuffObj3, SkyNormalBuffObj3, SkyTexBuffObj3;
+extern GLuint SkyBuffObj4, SkyIndxBuffObj4, SkyNormalBuffObj4, SkyTexBuffObj4;
+extern GLuint SkyBuffObj5, SkyIndxBuffObj5, SkyNormalBuffObj5, SkyTexBuffObj5;
+extern int g_SkyiboLen;
+/*texturen handles*/
+extern GLint h_uTexUnit;
+extern GLint h_aTexCoord;
+extern GLint h_uSky;
 
 extern int w_width, w_height;
 extern bool debug;

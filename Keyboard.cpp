@@ -35,6 +35,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 				break;
 			*/
 			/* player 1 controls  */
+			
 			case GLFW_KEY_W:
 				setKey(&W_key, action);
 				break;
@@ -59,6 +60,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 			case GLFW_KEY_RIGHT:
 				setKey(&RIGHT_key, action);
 				break;
+				
 		}
 }
 
